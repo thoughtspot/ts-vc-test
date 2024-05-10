@@ -45,6 +45,53 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"DESCRIPTION\",\"columnProperty\": {}},{\"columnId\": \"Day of Week(CLOSEDATE)\",\"columnProperty\": {}},{\"columnId\": \"Total AMOUNT\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"10098464-0cfc-436f-b07b-ee1f5a406488\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total AMOUNT\"],\"isOpposite\": false}},{\"id\": \"39ad0403-4ded-4ef5-a681-cd6992460fb4\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Day of Week(CLOSEDATE)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"DESCRIPTION\",\"color\": \"#A2ACBA\"},{\"serieName\": \"text\",\"color\": \"#A2ACBA\"}]}"
       display_mode: CHART_MODE
     viz_guid: e544786c-f517-4817-9e9d-68a66ffd9859
+  - id: Viz_2
+    answer:
+      name: "Total DAYS_TO_CLOSE, Total AMOUNT by Day of week CLOSEDATE"
+      tables:
+      - id: HUBSPOT_DEALS
+        name: HUBSPOT_DEALS
+        fqn: 15095c54-f22a-453c-b9e1-b7da1c6acc2e
+      search_query: "[DAYS_TO_CLOSE] [DESCRIPTION] [AMOUNT] [CLOSEDATE].'day of week'"
+      answer_columns:
+      - name: Total DAYS_TO_CLOSE
+      - name: DESCRIPTION
+      - name: Total AMOUNT
+      - name: Day of Week(CLOSEDATE)
+      table:
+        table_columns:
+        - column_id: DESCRIPTION
+          show_headline: false
+        - column_id: Day of Week(CLOSEDATE)
+          show_headline: false
+        - column_id: Total DAYS_TO_CLOSE
+          show_headline: false
+        - column_id: Total AMOUNT
+          show_headline: false
+        ordered_column_ids:
+        - DESCRIPTION
+        - Day of Week(CLOSEDATE)
+        - Total DAYS_TO_CLOSE
+        - Total AMOUNT
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: DESCRIPTION
+        - column_id: Day of Week(CLOSEDATE)
+        - column_id: Total DAYS_TO_CLOSE
+        - column_id: Total AMOUNT
+        axis_configs:
+        - x:
+          - Day of Week(CLOSEDATE)
+          "y":
+          - Total DAYS_TO_CLOSE
+          - Total AMOUNT
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"DESCRIPTION\",\"columnProperty\": {}},{\"columnId\": \"Total DAYS_TO_CLOSE\",\"columnProperty\": {}},{\"columnId\": \"Total AMOUNT\",\"columnProperty\": {}},{\"columnId\": \"Day of Week(CLOSEDATE)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"8ae62fb9-45e4-4901-9ee0-b459c53aaba1\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total DAYS_TO_CLOSE\"],\"isOpposite\": false}},{\"id\": \"fd18b23d-85e3-47a9-a5ff-ce9145969bb4\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total AMOUNT\"],\"isOpposite\": true}},{\"id\": \"4ee02e37-e0f6-4980-8680-e25a9fff51a5\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Day of Week(CLOSEDATE)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total DAYS_TO_CLOSE\",\"color\": \"#FCC838\"},{\"serieName\": \"Total AMOUNT\",\"color\": \"#A2ACBA\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 879f77ed-1f9f-447b-9e00-1513f5043c72
   layout:
     tiles:
     - visualization_id: Viz_1
