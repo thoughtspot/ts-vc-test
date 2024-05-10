@@ -92,6 +92,48 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"DESCRIPTION\",\"columnProperty\": {}},{\"columnId\": \"Total DAYS_TO_CLOSE\",\"columnProperty\": {}},{\"columnId\": \"Total AMOUNT\",\"columnProperty\": {}},{\"columnId\": \"Day of Week(CLOSEDATE)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"8ae62fb9-45e4-4901-9ee0-b459c53aaba1\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total DAYS_TO_CLOSE\"],\"isOpposite\": false}},{\"id\": \"fd18b23d-85e3-47a9-a5ff-ce9145969bb4\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total AMOUNT\"],\"isOpposite\": true}},{\"id\": \"4ee02e37-e0f6-4980-8680-e25a9fff51a5\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Day of Week(CLOSEDATE)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total DAYS_TO_CLOSE\",\"color\": \"#FCC838\"},{\"serieName\": \"Total AMOUNT\",\"color\": \"#A2ACBA\"}]}"
       display_mode: CHART_MODE
     viz_guid: 879f77ed-1f9f-447b-9e00-1513f5043c72
+  - id: Viz_3
+    answer:
+      name: Total HS_FORECAST_AMOUNT
+      tables:
+      - id: HUBSPOT_DEALS
+        name: HUBSPOT_DEALS
+        fqn: 15095c54-f22a-453c-b9e1-b7da1c6acc2e
+      search_query: "[HS_FORECAST_AMOUNT] [AMOUNT] [CLOSEDATE] [CLOSEDATE].monthly"
+      answer_columns:
+      - name: Total HS_FORECAST_AMOUNT
+      - name: Total AMOUNT
+      - name: Month(CLOSEDATE)
+      table:
+        table_columns:
+        - column_id: Month(CLOSEDATE)
+          show_headline: false
+        - column_id: Total HS_FORECAST_AMOUNT
+          show_headline: false
+        - column_id: Total AMOUNT
+          show_headline: false
+        ordered_column_ids:
+        - Month(CLOSEDATE)
+        - Total HS_FORECAST_AMOUNT
+        - Total AMOUNT
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Month(CLOSEDATE)
+        - column_id: Total HS_FORECAST_AMOUNT
+        - column_id: Total AMOUNT
+        axis_configs:
+        - x:
+          - Month(CLOSEDATE)
+          "y":
+          - Total HS_FORECAST_AMOUNT
+          - Total AMOUNT
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total HS_FORECAST_AMOUNT\",\"columnProperty\": {}},{\"columnId\": \"Total AMOUNT\",\"columnProperty\": {}},{\"columnId\": \"Month(CLOSEDATE)\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"4d668030-d61d-4348-b13f-9f8660c790ac\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total HS_FORECAST_AMOUNT\"],\"isOpposite\": false}},{\"id\": \"abf2823a-ed1b-45f9-856d-5ef09ccf3e4c\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total AMOUNT\"],\"isOpposite\": true}},{\"id\": \"c140996c-7bf5-4418-b45b-de09e453ece8\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(CLOSEDATE)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total HS_FORECAST_AMOUNT\",\"color\": \"#A2ACBA\"},{\"serieName\": \"Total AMOUNT\",\"color\": \"#FCC838\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: d7958276-51cd-4af9-99cb-89d3987c24ab
   layout:
     tiles:
     - visualization_id: Viz_1
