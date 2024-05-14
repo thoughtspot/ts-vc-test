@@ -74,62 +74,6 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Amount\",\"columnProperty\": {}},{\"columnId\": \"Jobtitle\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"4e694ea2-2d5f-4963-803f-80b28ce1d203\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Amount\"],\"isOpposite\": false}},{\"id\": \"eaa5ff10-62bb-4a25-bbe9-090fd2e1fda7\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Jobtitle\"]}}],\"seriesColors\": [{\"serieName\": \"Total Amount\",\"color\": \"#FCC838\"}],\"systemSeriesColors\": [{\"serieName\": \"Total Amount\",\"color\": \"#747E8C\"}]}"
       display_mode: CHART_MODE
     viz_guid: fcb6bdf6-7471-48c1-9416-e566573371e7
-  - id: Viz_3
-    answer:
-      name: Total Amount by Firstname
-      tables:
-      - id: HubSpot WS
-        name: HubSpot WS
-        fqn: 6a4f4e1c-9d5a-4093-9381-6f08994a7f07
-      search_query: "[Amount] [Jobtitle] [Dealstage] [Lifecyclestage] [Pipeline] [State] sort by [Amount] descending"
-      answer_columns:
-      - name: Total Amount
-      - name: Jobtitle
-      - name: Dealstage
-      - name: Lifecyclestage
-      - name: Pipeline
-      - name: State
-      table:
-        table_columns:
-        - column_id: Jobtitle
-          show_headline: false
-        - column_id: Dealstage
-          show_headline: false
-        - column_id: Lifecyclestage
-          show_headline: false
-        - column_id: Pipeline
-          show_headline: false
-        - column_id: State
-          show_headline: false
-        - column_id: Total Amount
-          show_headline: false
-        ordered_column_ids:
-        - Jobtitle
-        - Dealstage
-        - Lifecyclestage
-        - Pipeline
-        - State
-        - Total Amount
-        client_state: ""
-        client_state_v2: "{\"tableVizPropVersion\": \"V1\"}"
-      chart:
-        type: COLUMN
-        chart_columns:
-        - column_id: Jobtitle
-        - column_id: Dealstage
-        - column_id: Lifecyclestage
-        - column_id: Pipeline
-        - column_id: State
-        - column_id: Total Amount
-        axis_configs:
-        - x:
-          - Jobtitle
-          "y":
-          - Total Amount
-        client_state: ""
-        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Total Amount\",\"columnProperty\": {}},{\"columnId\": \"Jobtitle\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"4e694ea2-2d5f-4963-803f-80b28ce1d203\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total Amount\"],\"isOpposite\": false}},{\"id\": \"eaa5ff10-62bb-4a25-bbe9-090fd2e1fda7\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Jobtitle\"]}}],\"seriesColors\": [{\"serieName\": \"Total Amount\",\"color\": \"#FCC838\"}],\"systemSeriesColors\": [{\"serieName\": \"Total Amount\",\"color\": \"#747E8C\"}]}"
-      display_mode: TABLE_MODE
-    viz_guid: 30023739-b114-470d-8321-d106a0d30a9b
   layout:
     tabs:
     - name: Overview
@@ -147,5 +91,3 @@ liveboard:
         width: 6
     - name: Details
       description: ""
-      tiles:
-      - visualization_id: Viz_3
