@@ -75,8 +75,19 @@ liveboard:
       display_mode: CHART_MODE
     viz_guid: fcb6bdf6-7471-48c1-9416-e566573371e7
   layout:
-    tiles:
-    - visualization_id: Viz_2
-      size: MEDIUM_SMALL
-    - visualization_id: Viz_1
-      size: MEDIUM_SMALL
+    tabs:
+    - name: Overview
+      description: ""
+      tiles:
+      - visualization_id: Viz_1
+        x: 6
+        "y": 0
+        height: 4
+        width: 6
+      - visualization_id: Viz_2
+        x: 0
+        "y": 0
+        height: 4
+        width: 6
+    - name: Details
+      description: ""
